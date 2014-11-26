@@ -156,14 +156,14 @@
 	 */
 	WebApp.TextLoader = WebApp.Loader.extend({
 		thread: 16,
+		dataType: "text",
 		loadFile: function (file) {
 			this._super(file);
 			var self = this;
 			$.ajax({
 				url: this.prefixUrl(file),
 				async: false,
-				contentType: false,
-				dataType: "text",
+				dataType: this.dataType,
 				success: function (text) {
 					self.onSuccesss(file, text);
 					self.onLoad();
@@ -182,6 +182,7 @@
 	var Htmls = {};
 	WebApp.HtmlLoader = WebApp.TextLoader.extend({
 		thread: 16,
+		dataType: "html",
 		loadFile: function (file) {
 			if (Htmls[file]) {
 				this.contents[file] = Htmls[file];
@@ -199,6 +200,7 @@
 	 */
 	WebApp.ScriptLoader = WebApp.TextLoader.extend({
 		thread: 16,
+		dataType: "script",
 		onSuccesss: function (file, text) {
 			var self = this;
 			this._super(file, text);
@@ -224,6 +226,7 @@
 	var Jsons = {};
 	WebApp.JsonLoader = WebApp.TextLoader.extend({
 		thread: 16,
+		dataType: "json",
 		loadFile: function (file) {
 			if (Jsons[file]) {
 				this.contents[file] = JSON.parse(Jsons[file]);
@@ -252,6 +255,7 @@
 	 */
 	WebApp.StyleLoader = WebApp.Loader.extend({
 		thread: 16,
+		dataType: "text",
 		loadFile: function (file) {
 			this._super(file);
 			var self = this;
