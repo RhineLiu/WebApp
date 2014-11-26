@@ -1,0 +1,20 @@
+{
+	"libScripts": [
+		"js/zepto-1.1.4.min.js",
+		"js/TweenMax.min.js",
+		"js/Loading.js",
+		"base/Class.js",
+		"base/WebApp.js",
+		"base/Progress.js",
+		"base/Loader.js",
+		"js/App.js"
+	],
+	"app": {
+		"styles": [
+			"css/app.css"
+		],
+		"scripts": [],
+		"images": [],
+		"htmls": {}
+	}
+}
