@@ -1,0 +1,4 @@
+#main { background: #4390aa; font-size: 20px; font-family: "Microsoft YaHei", arial, helvetica, sans-serif;}
+#main .days { overflow: hidden; line-height: 80px; text-align: center;}
+#main .days span.namecn { font-size: 30px; font-weight: bolder;}
+#main .days span.num { font-size: 60px; font-weight: bold; font-family: Chalkboard, Comic Sans MS, Century Gothic, Arial, sans-serif; margin: 5px;}
