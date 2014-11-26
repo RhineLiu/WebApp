@@ -1,0 +1,16 @@
+html, body, div, img, span, a, table, tr, td { margin: 0; padding: 0;}
+html, body { width: 100%; height: 100%; color: #fff; font-size: 14px; min-width: 320px; min-height: 400px; background: #000;}
+.absolute { position: absolute;}
+.relative { position: relative;}
+.fixed { display: fixed;}
+.pointer { cursor: pointer;}
+.block { display: block;}
+.inline { display: inline;}
+.inblock { display: inline-block;}
+.hidden { display: none;}
+.screen { position: absolute; left: 0; top: 0; width: 100%; height:100%; overflow: hidden;}
+
+#main { background: #4390aa; font-size: 20px; font-family: "Microsoft YaHei", arial, helvetica, sans-serif;}
+#main .days { overflow: hidden; line-height: 80px; text-align: center;}
+#main .days span.namecn { font-size: 30px; font-weight: bolder;}
+#main .days span.num { font-size: 60px; font-weight: bold; font-family: Chalkboard, Comic Sans MS, Century Gothic, Arial, sans-serif; margin: 5px;}
