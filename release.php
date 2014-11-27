@@ -116,7 +116,7 @@ function removeCSS($htmDoc)
 	$links = $head->item(0)->getElementsByTagName('link');
 	for ($i=$links->length-1; $i>=0; --$i) {
 		$link = $links->item($i);
-		if ($link->hasAttribute("src"))
+		if ($link->hasAttribute("href"))
 			$head->item(0)->removeChild($link);
 	}
 }
