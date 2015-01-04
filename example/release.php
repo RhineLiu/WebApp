@@ -13,9 +13,9 @@ echo "creating dirs...<br/><br/>";
 // 创建目录
 check_dirs(array(
 	"release/",
-	"release/css/",
-	"release/js/",
 	"release/resource/",
+	"release/resource/css/",
+	"release/resource/js/",
 	"release/resource/htmls/",
 	"release/resource/images/",
 	"release/resource/jsons/"
@@ -31,6 +31,7 @@ echo "copying resources...<br/><br/>";
 recurse_copy("resource/htmls/", "release/resource/htmls/");
 recurse_copy("resource/images/", "release/resource/images/");
 recurse_copy("resource/jsons/", "release/resource/jsons/");
+recurse_copy("resource/fonts/", "release/resource/fonts/");
 /**
  * 复制资源
  * @param {string} $src 原目录
@@ -54,8 +55,8 @@ function recurse_copy($src, $dst)
 
 
 $res_json = "resource/resource.txt";
-$script_file = "release/js/app.min.js";
-$style_file = "release/css/app.min.css";
+$script_file = "release/resource/js/app.min.js";
+$style_file = "release/resource/css/app.min.css";
 $index_file = "release/index.html";
 
 $res = json_decode(file_get_contents($res_json), true);
@@ -104,8 +105,8 @@ $htmDoc->loadHTMLFile("index.html");
 $htmDoc->normalizeDocument();
 removeCSS($htmDoc);
 removeJS($htmDoc);
-insertCSS($htmDoc, "css/app.min.css");
-insertJS($htmDoc, "js/app.min.js");
+insertCSS($htmDoc, "resource/css/app.min.css");
+insertJS($htmDoc, "resource/js/app.min.js");
 echo "putting index.html...<br/>";
 file_put_contents($index_file, $htmDoc->saveHTML());
 echo $index_file . " write over!<br/><br/>";

@@ -9,3 +9,8 @@ html, body { width: 100%; height: 100%; color: #fff; font-size: 14px; min-width:
 .inblock { display: inline-block;}
 .hidden { display: none;}
 .screen { position: absolute; left: 0; top: 0; width: 100%; height:100%; overflow: hidden;}
+
+@font-face {
+	font-family: "ComicCustom";
+	src: url("../fonts/comicsansms.ttf");
+}
