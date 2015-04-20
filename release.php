@@ -30,6 +30,7 @@ function check_dirs($dirs)
 echo "copying resources...<br/><br/>";
 recurse_copy("resource/htmls/", "release/resource/htmls/");
 recurse_copy("resource/images/", "release/resource/images/");
+recurse_copy("resource/media/", "release/resource/media/");
 recurse_copy("resource/jsons/", "release/resource/jsons/");
 recurse_copy("resource/fonts/", "release/resource/fonts/");
 /**
