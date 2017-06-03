@@ -8,7 +8,7 @@
  *
  * 异步加载多个文件，提供进度对象的onUpdate、onError和onComplete回调，并可以限制同时加载数
  *
- * @author  Rhine.Liu(lyh_0100@sohu.com)
+ * @author  Rhine.Liu(rhine@rhine.me)
  * @date    2014.11.21
  * @version 1.4.1
  */
